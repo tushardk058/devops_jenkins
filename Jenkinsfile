@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clone repository') {
             steps {
-                git clone 'https://github.com/tushardk058/devops_jenkins'
+                git 'https://github.com/tushardk058/devops_jenkins'
             }
         }
         stage('Install Dependencies') {
