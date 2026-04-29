@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clone repository') {
             steps {
-                git 'https://github.com/tushardk058/devops_jenkins.git'
+                git branch: 'main', url: 'https://github.com/tushardk058/devops_jenkins.git'
             }
         }
         stage('Install Dependencies') {
@@ -19,7 +19,7 @@ pipeline {
         }
          stage('Run Tests') {
             steps {
-                bat 'node test'
+                bat 'npm test'
             }
         }
     }
